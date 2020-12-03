@@ -48,7 +48,7 @@ public class BinaryTree<T> implements BinaryTreeInterface<T> {
      * Returns the root Node.
      * @return ^^^^^^^^^^^^^.
      */
-    protected Node<T> returnRootNode(){
+    protected Node<T> getRootNode(){
         return root;
     }
 
@@ -59,7 +59,6 @@ public class BinaryTree<T> implements BinaryTreeInterface<T> {
     protected T getRootData(){
         return root.getValue();
     }
-
 
 
 
