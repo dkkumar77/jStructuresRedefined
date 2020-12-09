@@ -1,20 +1,53 @@
 package BinaryTree;
 
+
+
 public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree implements BinarySearchTreeInterface {
-
-    BinarySearchTree(){
-        super();
-    }
-
-    BinarySearchTree(T value){
-        super(value);
-    }
 
     /**
      * {@inheritdoc}
      */
+    BinarySearchTree(){
+        super();
+    }
+    /**
+     * {@inheritdoc}
+     */
+    BinarySearchTree(T value){
+        super(value);
+    }
+    /**
+     * {@inheritdoc}
+     */
+    @SuppressWarnings("unchecked")
     @Override
     public T insert(Object value) {
+        if(isEmpty()){
+            root = new Node(value);
+            return (T) value;
+        }
+        else if (!lookup(value)){
+            insertAlgo((T) value, root);
+            return (T) value;
+        }
+        return null;
+
+    }
+
+
+
+    public Node<T> insertAlgo(T value, Node<T> successor){
+
+        if(successor == null){
+            return successor.setValue(value);
+        }
+
+        else if(value.compareTo((T) successor) < 0){
+            insertAlgo(value, successor.getRightChild());
+        }
+        else if(value.compareTo((T) successor) > 0){
+            insertAlgo(value, successor.getRightChild());
+        }
         return null;
     }
     /**

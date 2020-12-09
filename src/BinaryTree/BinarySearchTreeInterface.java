@@ -9,7 +9,7 @@ public interface BinarySearchTreeInterface<T> {
      * @param value - value represents the  value for insertion.
      * @return - returnst hte value that is inserted.
      */
-    T insert(T value);
+    T insert(Object value);
 
     /**
      * The remove method, will remove a specific node from the tree.

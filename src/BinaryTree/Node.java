@@ -81,5 +81,10 @@ public class Node<T> {
     }
 
 
+    protected Node<T> setValue(T data){
+        this.value = data;
+        return this;
+
+    }
 
 }
