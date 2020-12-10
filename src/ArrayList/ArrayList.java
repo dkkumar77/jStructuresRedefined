@@ -1,7 +1,4 @@
 package ArrayList;
-
-import org.omg.CORBA.DynAnyPackage.InvalidValue;
-
 import java.util.NoSuchElementException;
 
 /**
@@ -177,6 +174,7 @@ public class ArrayList<T> implements DynamicArrayInterface{
         return mainStorage[index];
 
     }
+
 
 
     public int size(){
