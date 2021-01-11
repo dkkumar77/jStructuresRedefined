@@ -30,7 +30,8 @@ public class LinkedList<E> implements LinkedListInterface<E> {
         else{
             head = new Node<E>(value);
             count++;
-            tail = head;        }
+            tail = head;
+        }
         return null;
     }
 

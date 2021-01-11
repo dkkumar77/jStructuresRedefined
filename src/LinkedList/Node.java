@@ -15,14 +15,10 @@ public class Node<T> {
     public Node<T> getNext(){
        return this.next;
     }
-
     public Node<T> getPrevious(){
         return this.previous;
     }
-    public void setPrevious(Node<T> previous){
-        this.previous = previous;
-
-    }
+    public void setPrevious(Node<T> previous){ this.previous = previous; }
     public void setData(T data){
         this.data = data;
     }

@@ -1,5 +1,4 @@
 package ArrayList;
-import java.util.NoSuchElementException;
 
 /**
  * Deepak's Generic Arraylist: DESCRIPTION TBD
@@ -41,6 +40,7 @@ public class ArrayList<T> implements DynamicArrayInterface{
      *
      * @param value
      */
+    @Override
     protected void add(T value){
         if(this.currentSize+1 < MAX_SIZE){
             mainStorage[currentSize] = value;
@@ -185,6 +185,24 @@ public class ArrayList<T> implements DynamicArrayInterface{
     public T[] toArray(){
         return mainStorage;
     }
+
+
+
+
+    protected void clear(){
+        int i;
+        final int loop = this.currentSize;
+        for(i = 0; i < loop; i++){
+            this.mainStorage[i] = null;
+        }
+        T[] n = (T[]) new Object[startSize];
+
+         mainStorage = n;
+
+
+
+    }
+
 
     public static void main(String[] args) {
         ArrayList<Integer> test = new ArrayList();
